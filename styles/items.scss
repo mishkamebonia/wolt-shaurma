@@ -1,0 +1,123 @@
+$backgroundColor: rgb(18, 18, 18);
+$dark: rgb(65, 67, 69);
+$white: rgb(255, 255, 255);
+$lightWhite: rgba(255, 255, 255, 0.8);
+$blue: rgb(0, 157, 224);
+$lightBlueBtn: rgba(0, 157, 224, 0.10);
+$lightBlueCard: rgba(0, 157, 224, 0.18);
+$orderBackgroundBtn: rgba(0, 157, 224, 0.7);
+
+$transitionTime: 0.18s;
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin defaultBtn {
+  color: $blue;
+  background: $lightBlueBtn;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+@mixin icon {
+  font-size: 16px;
+  margin-right: 18px;
+}
+
+@mixin underLine {
+  content: '';
+  position: absolute;
+  min-width: 320px;
+  width: 100%;
+  height: 1px;
+  background: $lightWhite;
+  opacity: 0.2;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+@mixin itemUnderline {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  width: 103%;
+  height: 1px;
+  background: $lightWhite;
+  opacity: 0.2;
+}
+
+.info-card {
+  position: relative;
+  background: $lightBlueCard;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 18px 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.radius-for-content {
+  border-radius: 5px 5px 0 0 !important;
+}
+
+.flex-modal {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#item-counter {
+  margin-right: 5px;
+}
+
+#not-found {
+  text-align: center;
+  font-size: 22px;
+  margin: 100px 0 100px;
+  color: $lightWhite;
+}
+
+#favorite {
+  display: none;
+}
+
+.favorite {
+  position: fixed;
+  width: 100%;
+  font-weight: 700;
+  padding: 20px 25px;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 100;
+
+  border-radius: 5px;
+  border: 2px solid $blue;
+  color: $blue;
+  background: $white;
+}

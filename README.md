@@ -1,1 +1,1 @@
-# shop-vite-project
+# wolt-shaurma
