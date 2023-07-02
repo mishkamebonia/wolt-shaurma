@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mishkas Shawarma</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <section class="background"></section>
+    <section class="description">
+      <div class="title">
+        <h1 id="object-name">Mishkas Shawarma</h1>
+        <input type="checkbox" id="favorite">
+        <label for="favorite"><i class="fa-regular fa-heart"></i></label>
+      </div>
+      <div class="list">
+        <p><i class="icon fa-regular fa-face-smile"></i>Very good, 8.2</p>
+      </div>
+      <div class="list">
+        <p><i class="icon fa-regular fa-clock"></i>10:00 AM-11:00 PM</p>
+        <button class="default-btn">More info</button>
+      </div>
+      <div class="list">
+        <div class="schedule">
+          <i class="icon fa-solid fa-person-biking"></i>
+          <div class="schedule-description">
+            <p>Schedule for later</p>
+            <p>Home (33 Ilia Chavchavadze avenue)</p>
+          </div>
+        </div>
+        <button class="default-btn">Change</button>
+      </div>
+      <div class="list">
+        <p><i class="icon fa-solid fa-person-circle-plus"></i>Order together</p>
+        <button class="default-btn">Start now</button>
+      </div>
+      <div class="info-card under-line">
+        <p>Get GEL 5.50 off from delivery fee</p>
+      </div>
+    </section>
+    <section class="search">
+      <div class="info-card">
+        <p>This menu is in Georgian. Would you like to try a machine translation into another language?</p>
+        <div class="info-links">
+          <button>Never</button>
+          <button>Always</button>
+          <button>Translate</button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search Mishkas Shawarma">
+        <i class="search-icon fa-solid fa-magnifying-glass"></i>
+      </div>
+    </section>
+    <!-- ? shawarma division start -->
+    <section class="items-list">
+      <h3>Shawarma
+        <span><span id="item-counter"></span><i class="fa-solid fa-arrow-down-wide-short"></i></span>
+      </h3>
+      <!-- ! not found start-->
+      <p id="not-found" class="hidden">No Resoult Found</p>
+      <!-- ! not found end-->
+      <!-- ? 1 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Medium</h5>
+            <p class="made">With pork</p>
+            <p class="price">10</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 1 list end -->
+      <!-- ? 2 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Standart</h5>
+            <p class="made">With pork</p>
+            <p class="price">14</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 2 list end -->
+      <!-- ? 3 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Super</h5>
+            <p class="made">With pork</p>
+            <p class="price">18</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 3 list end -->
+      <!-- ? 4 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Medium</h5>
+            <p class="made">With chicken</p>
+            <p class="price">8</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 4 list end -->
+      <!-- ? 5 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Standart</h5>
+            <p class="made">With chicken</p>
+            <p class="price">12</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 5 list end -->
+      <!-- ? 6 list start -->
+      <button class="submit-card">
+        <div class="item-card">
+          <div class="item-description">
+            <h5 class="headline">Shawarma Super</h5>
+            <p class="made">With chicken</p>
+            <p class="price">16</p>
+          </div>
+          <div class="item-image">
+            <img src="images/shaurma.jpg">
+          </div>
+        </div>
+      </button>
+      <!-- ? 6 list end -->
+    </section>
+    <!-- * modal start -->
+    <section id="modal" class="modal hidden">
+      <button id="cancel"><i id="cancel-icon" class="fa-solid fa-xmark"></i></button>
+      <div id="modal-display">
+        <section class="background">
+        </section>
+        <div class="modal-container">
+          <div class="description">
+            <h2 id="headline"></h2>
+            <p id="price"></p>
+            <p id="made"></p>
+          </div>
+          <div class="options">
+            <h4>Special Crocal Sauce</h4>
+            <p>Choose at least one item</p>
+            <div class="question">
+              <input id="croal-no" class="radio" type="radio" name="croal" checked>
+              <span class="checkmark"></span>
+              <label class="question-label" for="croal-no">No</label>
+            </div>
+            <div class="question">
+              <input id="croal-yes" class="radio" type="radio" name="croal">
+              <span class="checkmark"></span>
+              <label class="question-label" for="croal-yes">Yes</label>
+            </div>
+          </div>
+          <div class="options">
+            <h4>Choose the ingredients 🌯</h4>
+            <p>Choose up to 6 additional items</p>
+            <div class="question">
+              <input id="without-mayonnaise" class="radio" type="checkbox" name="ingredient" value="without mayonnaise">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-mayonnaise">Without mayonnaise ❌</label>
+            </div>
+            <div class="question">
+              <input id="without-ketchup" class="radio" type="checkbox" name="ingredient" value="without ketchup">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-ketchup">Without ketchup ❌</label>
+            </div>
+            <div class="question">
+              <input id="without-onion" class="radio" type="checkbox" name="ingredient" value="without onion">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-onion">Without onion ❌</label>
+            </div>
+            <div class="question">
+              <input id="without-pepper" class="radio" type="checkbox" name="ingredient" value="without pepper">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-pepper">Without pepper 🌶️❌</label>
+            </div>
+            <div class="question">
+              <input id="without-tomatoes" class="radio" type="checkbox" name="ingredient" value="without tomatoes">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-tomatoes">Without tomatoes 🍅❌</label>
+            </div>
+            <div class="question">
+              <input id="without-lettuce" class="radio" type="checkbox" name="ingredient" value="without lettuce">
+              <span class="checkmark"></span>
+              <label class="question-label" for="without-lettuce">Without lettuce ❌</label>
+            </div>
+            <div class="question">
+              <input id="with-everything" class="radio" type="checkbox" name="ingredient" value="with everything">
+              <span class="checkmark"></span>
+              <label class="question-label" for="with-everything">With everything 🌯</label>
+            </div>
+          </div>
+          <div class="options">
+            <h4>Choose sauce</h4>
+            <p>Choose at least one item</p>
+            <div class="question">
+              <input id="standard-sauce" class="radio" type="radio" name="sauce" checked>
+              <span class="checkmark"></span>
+              <label class="question-label" for="standard-sauce">Standard</label>
+            </div>
+            <div class="question">
+              <input id="less-sauce" class="radio" type="radio" name="sauce">
+              <span class="checkmark"></span>
+              <label class="question-label" for="less-sauce">less sauce</label>
+            </div>
+            <div class="question">
+              <input id="more-sauce" class="radio" type="radio" name="sauce">
+              <span class="checkmark"></span>
+              <label class="question-label" for="more-sauce">more sauce</label>
+            </div>
+          </div>
+          <div class="order-buttons">
+            <div class="count">
+              <button id="count-minus">-</button>
+              <span id="count-display"></span>
+              <button id="count-plus">+</button>
+            </div>
+            <button id="add-order"><span>Add to order</span><span id="total-price"></span></button>
+          </div>
+        </div>
+      </div>
+      <div id="modal-order-display" class="hidden">
+        <h2>Thank you, Your order has been received</h2>
+        <i class="fa-regular fa-circle-check"></i>
+        <button id="order-history">Order History <i class="fa-solid fa-angle-down"></i></button>
+        <div id="order-content" class="hidden">
+          <p>Object name:<span id="name"></span></p>
+          <p>Order:<span id="order"></span></p>
+          <p>Content:<span id="composition"></span></p>
+          <p>Crocal sauce:<span id="crocal-sauce"></span></p>
+          <p>Ingredients:<span id="ingredients"></span></p>
+          <p>Sauce type:<span id="sauce-type"></span></p>
+          <p>Quantity:<span id="quantity"></span></p>
+          <p class="total">total tax:<span id="total"></span></p>
+        </div>
+      </div>
+    </section>
+    <!-- * modal end -->
+    <!-- ? shawarma division end -->
+  </div>
+  <section id="overlay" class="overlay hidden"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
